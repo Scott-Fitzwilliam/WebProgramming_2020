@@ -1,0 +1,25 @@
+html, body{
+font-family: 'spartan';
+margin: 0;
+}
+
+.header{
+    background-color:greenyellow;
+    height: 350px;
+    text-align: center;
+    line-height: 350px;
+    font-family: 'spartan';
+}
+
+.header h1{
+    margin: 0;
+}
+
+
+.social button {
+    font-size: 14px;
+    width: 50%;
+    border: 0;
+    padding: 10px;
+    color: white;
+}

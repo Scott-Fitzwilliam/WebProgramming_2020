@@ -1,0 +1,47 @@
+html, body{
+font-family: 'spartan';
+margin: 0;
+}
+
+.header{
+    background-color: olivedrab;
+    height: 350px;
+    text-align: center;
+    line-height: 350px;
+    font-family: 'spartan';
+}
+
+
+.header h1{
+    color: white;
+}
+
+
+.button{
+    background-color: olivedrab;
+    padding: 15px 25px;
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;  
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+.indentedheader{
+    margin: 50px;
+    font-family: 'spartan';
+}
+
+.footerborder{
+    background-color:  lightgrey;
+    height: 150px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: "spartan";
+  
+    
+
+}
