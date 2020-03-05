@@ -3,45 +3,62 @@ font-family: 'spartan';
 margin: 0;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0px auto;
+  }
+
+
 .header{
     background-color: olivedrab;
-    height: 350px;
+    height: 250px;
     text-align: center;
-    line-height: 350px;
+    line-height: 250px;
     font-family: 'spartan';
 }
-
-
-.header h1{
+.header h1 {
+    margin: 0;
     color: white;
+    
 }
 
 
 .button{
-    background-color: olivedrab;
-    padding: 15px 25px;
-    border-radius: 5px; 
     text-align: center;
-    text-decoration: none; 
-    display: inline-block;  
+    padding: 15px 25px;
+    
 }
 .button a{
     text-decoration: none;
     color: white;
+    background-color: olivedrab;
+    padding: 15px 25px;
+    border-radius: 5px; 
+    display: inline-block; 
 }
+a.class1 {color:olivedrab;}
+a.class1:link  {text-decoration: none; color: olivedrab;}
+a.class1:visited {text-decoration: none; color: olivedrab;}
+a.class1:hover {text-decoration: underline; color: olivedrab;}
+a.class1:active {text-decoration: none; color: olivedrab;}
 
 .indentedheader{
     margin: 50px;
     font-family: 'spartan';
 }
+.indentedheader h1 {
+    font-weight: 600;
+    
+
+}
+
 
 .footerborder{
     background-color:  lightgrey;
-    height: 150px;
+    height: 100px;
+    padding: 15px 25px;
     margin-bottom: 0px;
     text-align: center;
     font-family: "spartan";
-  
-    
-
+    color: black;
 }
