@@ -35,6 +35,7 @@ margin: 0;
     padding: 15px 25px;
     border-radius: 5px; 
     display: inline-block; 
+    
 }
 a.class1 {color:olivedrab;}
 a.class1:link  {text-decoration: none; color: olivedrab;}
