@@ -21,6 +21,7 @@ addButton.onclick = function() {
     // Initialises NewListItem template 
     let NewListItem = document.createElement("div");
     let NewListItemText = document.createTextNode(input1);
+    //null is cheating, but it's a free country
     if (NewListItemText.value == null) {
         window.alert(".... Must be nice to want for nothin ehh?")
     }
@@ -102,7 +103,7 @@ addButton.onclick = function() {
                     //the third element you created, then .indexOf(NewListItem) = 3 and when i = 3 the if(true) so it will delete the 3rd element)
                     //as splice (i, 1) =  splice (3, 1)  the the 1 represents how many element to cut. splice (3, 2) would delete element 3 AND 4.
                     //Yay for making a functioning array monitor
-                    b
+                    
                 }
             }
         }  
@@ -114,6 +115,7 @@ addButton.onclick = function() {
     }
 }
 
+//removes created elements along with empting the created array for good measure.
 clearButton.onclick = function() {
     NewListItemArray.forEach(function(element) {
         elements1.innerHTML = "Shopping List";
