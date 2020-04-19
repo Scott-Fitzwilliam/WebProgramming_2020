@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>The select element</h1>
+
+    <p>The select element is used to create a drop-down list:</p>
+    
+    <input type="text" id="input1" value = "0">
+<!-- When the selection is changed, the value of the selector is updates, then shown on the console. Did not have the functionality I was hoping for. -->
+    <select onchange="val()" id="operatorSelection" >
+      <option value="plus"> + </option>
+      <option value="minus"> - </option>
+      <option value="multi"> * </option>
+      <option value="divide"> / </option>
+      <option value="meh"> meh </option>
+    </select>
+    
+    <input type="text" id="input2" value = "0">
+    <br>
+<!-- This worked in a much better way -->
+    <button onclick="clicked();" id="theButton"> click me please</button>
+
+    <p id="element">Value: </p>
+
+    <script src="task5.js"></script> 
+</body>
+</html>

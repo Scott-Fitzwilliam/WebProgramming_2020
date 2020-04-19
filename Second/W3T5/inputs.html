@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" name="value1" id="value1">
+<br>
+<input type="number" name="value2" id="value2">
+<button id="button">click me</button>
+
+<script type="text/javascript">
+    let value1input = document.getElementById("value1");
+    let value2input = document.getElementById("value2");
+    let clickmebutton = document.getElementById("clickme");
+console.log(value1input.value);
+console.log(value2input.value);
+
+button.onclick = buttonclicked;
+
+function buttonclicked(){
+    let value1 = Number(value1input.value);
+    let value2 = Number(value2input.value);
+    console.log(value1 + value2)
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>

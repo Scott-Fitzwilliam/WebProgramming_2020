@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clickmebutton">click me</button>
+    <button id="dontclickmebutton"> Don't click me</button>
+    
+    <div id="check">
+
+    </div>
+
+    <script type="text/javascript">
+        let clickmebutton = document.getElementById("clickmebutton");
+        let dontclickmebutton = document.getElementById("dontclickmebutton");
+        let check = document.getElementById("check");
+
+        console.log(clickmebutton);
+        console.log(dontclickmebutton);
+
+        /*/ have an event happen when button is clicked
+        you might need to create a div with a new id to make this work 
+        (or use the dont clik me button that we have already created)
+        
+        1. Create a variable that will store the count
+        2. Handle an onclick event for a button, that:
+            2.1 increases the counter by one
+            2.2. updates an element on the webpage wit that new count value
+
+        /*/
+
+        /*/ check innerHTML shows the information on the
+            function used. In this case the = count.
+        /*/
+        let count = 0
+        clickmebutton.onclick = function() {
+            console.log("button clicked");
+            clickmebutton.style.background = "cyan";
+            count++;
+            check.innerHTML= count;
+
+        }
+
+
+        dontclickmebutton.onclick = function() {
+            console.log("button clicked");
+            dontclickmebutton.style.background = "red";
+            count--;
+            check.innerHTML= count;
+
+           
+        }
+        
+
+        prntln(count);
+        
+        clickmebutton.addEventListener("click", function(){
+
+        });
+
+        function onbuttonclick(){
+            console.log("button clicked");
+            clickmebutton.innerHTML= "scott clicked me";
+        }
+
+
+
+
+        
+    </script>
+
+
+
+
+</body>
+</html>

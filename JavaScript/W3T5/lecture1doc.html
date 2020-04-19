@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="content">Random Text</div>
+    <!-- Counter to be used in HTML -->
+    <div id="counter">Counter : null</div>
+    <!-- the button creates the visual button, which can be 
+    referenced later by a document.getElementById("thebutton"); -->
+   
+    <button id="theButton">Hello world</button>
+    <!-- this button goes next the counter -->
+    <button id="theCountButton"> Count!</button>
+    <!-- inputs are always strings, if you want not have a string
+    you have to convert the input later -->
+    <input id= myInput type="number" value = "1";> 
+
+
+<!-- can be type= txt/js or src = file.js in the first script bracket -->
+    <script type="text/javascript">
+        // The lets are based on the html above
+        let content = document.getElementById("content");
+        let myButton = document.getElementById("theButton");
+        let counter = document.getElementById("counter");
+        let myCountButton = document.getElementById("theCountButton");
+        
+        
+        let myInput = document.getElementById("myInput");
+        //variable for holding clicks.
+        let count = 0;
+
+        //shows the structure of content
+        console.log(content);
+        //shows the html of the content
+        console.log(content.innerHTML);
+
+        //onclick is a property, so it needs gain a value when triggered.
+        // therefore onclick must = something.
+        myButton.onclick = buttonClickEvent;
+        myCountButton.onclick = countButton;
+
+        //function allows for specific contained cases for code or events
+        // this will only run, when something outside the brackets references it.
+        function buttonClickEvent() {
+            content.innerHTML = "This function changes the content of 'content' using innerHTML";
+        }
+
+        function countButton() {
+            //inputs are always strings. You need to convert int or float
+            // to use them for calcualtions and buttons.
+            let inputValue =  parseFloat(myInput.value);
+            count = count + inputValue;
+
+            counter.innerHTML = "Counter : " + count;
+            
+        }
+
+    </script>
+</body>
+</html>

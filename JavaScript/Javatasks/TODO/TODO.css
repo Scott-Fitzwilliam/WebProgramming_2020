@@ -1,0 +1,54 @@
+html, body{
+font-family: Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+width: 800px;
+text-align: center;
+align-items: center;
+}
+
+.inputs{
+text-align: center;
+padding: 5px 0px 5px;
+}
+
+.inputs input{
+width: 30%;
+margin: 5px 0px 5px;
+}
+.inputs button{
+width: 11%;
+margin: 5px 0px 5px;
+}
+.inputs select {
+width: 54%;
+margin: 5px 0px 50px;
+}
+
+.ListContainer{
+display: flex;
+}
+
+.elements1{
+width: 34%;
+font-size: 20px;
+
+}
+.elements2{
+width: 34%;
+font-size: 20px;
+
+}
+.elements3{
+width: 34%;
+font-size: 20px;
+
+}

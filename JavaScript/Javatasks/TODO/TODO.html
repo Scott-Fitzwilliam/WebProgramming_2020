@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="TODO.css">
+<body>
+
+<!-- The divs arn't strictly necessary at the beginning to make the ToDo work, but lochi has a point
+that it's just good practive to create them, especially when css starts getting thrown in, down the track.  -->
+<!-- Don't stress current me, you can do it! :) -->
+<div class= "container">
+
+
+    <div class="box">
+        
+        <div class= "inputs">
+        <input class="input1" id="input1" type="text" placeholder="New item..." >
+        <button class="addButton" id="addButton">Add</button>
+        <button class="clearButton" id="clearButton">Clear Todo</button>
+        <br>
+        
+        
+        <select class="operatorSelection"  id="operatorSelection" >
+            <option value="shoppingList"> Shopping List </option>
+            <option value="killList"> Kill Queue </option>
+            <option value="slapList"> Slap Queue </option>
+        </select>
+    </div>
+        
+        <!-- This is the template in which to create new elements, eventually it will be placed purely in javascript -->
+      <div class= "ListContainer">
+        <div class="elements1" id = "elements1">
+            Shopping List
+        </div>
+        <div class="elements2" id = "elements2">
+            Kill Queue
+        </div>
+        <div class="elements3" id = "elements3">
+            Slap Queue
+        </div>
+    </div>
+
+    </div>
+</div>
+
+    <script src="TODO.js"></script>
+</body>
+</html>

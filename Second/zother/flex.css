@@ -1,0 +1,47 @@
+html, body {
+    background-color: DodgerBlue;
+    margin: 0;
+}
+
+.flex-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+    margin: auto;
+   
+  }
+  
+  
+    
+  .flex-container {
+  
+    background-color: white;
+    width: 650px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+   
+    flex-direction: column;
+    
+  }
+  .container {
+    background-color: gold;
+    width: 70%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    flex-direction: row;
+    
+  }
+  .container2 {
+    background-color: yellow;
+    width: 30%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    flex-direction: row;
+    
+}
+
