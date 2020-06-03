@@ -22,7 +22,7 @@ addButton.onclick = function() {
     let NewListItem = document.createElement("div");
     let NewListItemText = document.createTextNode(input1);
     //null is cheating, but it's a free country
-    if (NewListItemText.value == null) {
+    if (NewListItemText.textContent == '') {
         window.alert(".... Must be nice to want for nothin ehh?")
     }
     console.log(NewListItemText.textContent);

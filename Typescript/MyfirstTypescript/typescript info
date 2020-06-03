@@ -1,0 +1,13 @@
+There is no chance i can remember the settings stuff.
+------------------------
+json
+
+"start": "tsc && node dist/index.js"
+configure how the program will execute locally.
+this make the program start, tec makes it compile into our tsc file. (typescript)
+&& node dist/index.js means that once the code is compiled it will be run in dist as javascript
+
+run the application, put npm start. it runs the  "start" command.
+
+normal webscript can be used such as getElementById
+npm run-script build.

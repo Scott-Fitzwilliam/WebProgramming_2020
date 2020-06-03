@@ -1,0 +1,30 @@
+
+// //Need to make the div == to the input not just hello world.
+// //First, step go over input and find how it was added.
+
+// // 1.Allow the user to remove individual tasks Done (impliment even x buttons later, make it work first)
+
+// // 2.Allow the user to clear all tasks (will need an array or a foreach loop for that
+
+// // 3.Allow the user to toggle a task complete or not
+// // just add another button that has a differnt function to the remove button(call it done)
+
+// // 4.Allow the user to select a task 'category' to add the task to (multiple lists) 
+// // Refer to extension task 2
+
+// addButton.onclick = function() {
+// //gets updated value of user input every time button is clicked
+// let input1 = document.getElementById("input1").value;
+// //creates a template div that does not exist, with the text and button to be attached created as well
+//     let myNewElement = document.createElement("div");
+//     let myNewElementText = document.createTextNode(input1);
+//     let myNewElementButton = document.createElement("button");
+//     myNewElementButton.innerHTML = "x";
+	
+// 	//the first append child adds text to myNewElement, the second adds a button., the third to the parent div.
+//     myNewElement.appendChild(myNewElementText);
+//     myNewElement.appendChild(myNewElementButton);
+//     elements.appendChild(myNewElement);
+
+
+// myNewElements = myNewElements.splice(myNewElements.indexOf(myNewElement), 1)'

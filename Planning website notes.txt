@@ -1,0 +1,140 @@
+onclick functions will be need to create and remove elements
+
+when a task is create a button needs to be created to remove it.
+
+another button needs to be created which can say the task is completed, which for now will make it cyan
+
+to give onclick functionality to the created divs, you can make a function for 
+
+myNewElement.onclick = function()
+{
+
+}
+
+all of the elemetns withing the first onclick only exist in the onclick, to reference else where, we need to create an array that recieves a reference from it.
+
+
+
+let myNewElementArray = []
+
+to add to array
+myNewElementArray.push(myNewElement);
+to show that the array is expanding
+console.log(myNewElementArray);
+
+when using the array, whenever, a change event happens such as adding or removing, the the array needs to do the same to be accurate.
+
+myNewElementArray
+
+
+doSomethingButton.onmouseover = function(){
+myNewElementArray.forEach.backgroundcolor = "grey";
+}
+
+doSomethingButton.onmouseleave = function(){
+myNewElementArray.forEach(function(element){
+element.style.backgroundcolor = "white";
+});
+}
+
+window setTimeout for countdown maybe
+
+
+for css adding class
+myNewElement.classlist.add("element");
+
+
+
+to add to a specific list, they must first be set in html, because I CANNOT BE FUCKED!.
+
+They will need to be in their own div, that stretches the whole page.
+Each should be spread evenly and centred 30% should do it.
+
+
+
+
+
+
+click power 10x
+if cookies > 150 by upgrade
+adds 1 click every 1secs
+
+if cookies > 1000 by unpgrade 2
+double click power
+
+this will be enough
+
+setTimeout
+
+Set Timeinterval
+
+uses function so that once parameter(time) is done, an action(the function) is taken.
+Will be very useful for cookie click upgrades.
+
+each setTimeout and set interval has an indexthat can be used to stop or clear it
+
+
+will need to get the page to display changing cookies per second.
+
+set interval(function) {
+
+cookies += 1;
+doument.getElementbyID("elements").innerhtml = cookies;
+console.log(cookies or something)
+innerhtml is removes whatever was there before, nothing can remain. Avoid doing this where things need to be remember.
+}
+
+1600/480/787/317
+
+
+what is the html framework set up
+width and height reletive.
+
+
+The real game consists of 5 seperated div sections, 3 main sections and 2 dividers
+
+15px wide for deviders btw
+the other sections can look however you like
+
+Left section: needs Giant cookie and cookies count and cookies per second, also a name at the top
+
+
+
+Comments up top
+devider in between
+
+
+Big maybe
+maybe for middle section, you can just add goofy picks like cookie fields
+all of them would have the same class but different ids
+maybe 2 will do
+
+Create the comments section to cycle between 10 or so messages, to make it more interesting for lochi to look at. You may need to use the random switch generator for it, with interval time for automatic swaping. maybe an onclick too.
+
+
+Right section
+Needs the upgrades
+
+the 2 or 3 upgrades
+
+maybe one building MAYBE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+PROJECT (ProjCode, ProjectTitle)
+PRIMARY KEY (ProjCode)
+
+WORKER (Wid, WName, Gender, ProjCode)
+PRIMARY KEY (Wid)
+FOREIGN KEY (ProjCode) references PROJECT
+
+Create Table PROJECT (
+ ProjCode nvarchar (20)
+,ProjectTitle nvarchar (50)
+,PRIMARY KEY (ProjCode)
+);
+
+Create Table WORKER (
+ Wid int
+,WName nvarchar (50)
+,Gender nvarchar (1)
+,ProjCode nvarchar (20)
+,PRIMARY KEY (Wid)
+,FOREIGN KEY (ProjCode) references PROJECT
+);
+
+
+SELECT M.MOVIENO, M.TITLE, C.COLOUR_NAME, R.DESCCRIPTION
+FROM (MOVIE6463 M
+INNER JOIN COLOURTYPE6463 C
+ON M.COLOUR_CODE = C.COLOUR_CODE)
+INNER JOIN RATING6463 R
+ON (M.RATINGCODE = R.RATINGCODE)
+ORDER BY M.MOVIENO;
