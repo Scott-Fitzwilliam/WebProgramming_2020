@@ -11,3 +11,28 @@ run the application, put npm start. it runs the  "start" command.
 
 normal webscript can be used such as getElementById
 npm run-script build.
+
+Type script is to check that our code is going to behave as we expect it by checking for 
+incorrect values or items.
+
+
+
+
+
+//the purpose of the src folder is have a place to put all the source code (the to be compiled code)
+//the dist folder is for the output of our code.
+//you can do normal website js
+// the as htmlButtonelement treats the javascript like a button which it is, and gives you the intellisense options for buttons.
+let myButton = document.getElementById("myButton") as HTMLButtonElement | null;
+if(myButton == null) {
+    alert("Button not found");
+} else{ 
+//An error occurs because the strict null checks from tsconfig is on.
+//The if statement solves this issue by preventing a null.
+
+myButton.onclick = function() {
+    if(myButton == null) return;
+    alert(myButton.value);
+
+    }
+}     

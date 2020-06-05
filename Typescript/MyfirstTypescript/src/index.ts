@@ -1,14 +1,149 @@
-//the purpose of the src folder is have a place to put all the source code (the to be compiled code)
-//the dist folder is for the output of our code.
-//you can do normal website js
-let myButton = document.getElementById("myButton");
-if(myButton == null) {
-    alert("Button not found");
-} else{
-//An error occurs because the strict null checks from tsconfig is on.
-//The if statement solves this issue by preventing a null.
-myButton.onclick = function() {
-    alert("Hello World");
+//Let MyCode = document.PleaseGod("Work");
+let addButton = document.getElementById("addButton") as HTMLButtonElement ;
+let clearButton = document.getElementById("clearButton") as HTMLButtonElement;
+let elements1 = document.getElementById("elements1") as HTMLElement | null;
+let elements2 = document.getElementById("elements2") as HTMLElement | null;
+let elements3 = document.getElementById("elements3") as HTMLElement | null;
+let operatorSelection = document.getElementById("operatorSelection") as HTMLButtonElement | null;
 
+//console.log(clearAllButton.innerHTML);
+
+/*some array stuff to create memory of elements created in the code
+so that it can be referenced in other parts of the code.
+*/
+let NewListItemArray: any [] = new Array(); 
+
+
+    
+addButton.onclick = function() {
+    
+    //Stores user input
+     
+    
+    let GetInput1 = document.getElementById("input1") as HTMLButtonElement | null;
+    if (GetInput1== null) return;  
+    let input1: string = GetInput1.value ;
+    
+    // Initialises NewListItem template 
+    let NewListItem = document.createElement("div");
+    let NewListItemText = document.createTextNode(input1);
+    //null is cheating, but it's a free country
+    if (NewListItemText.textContent == '') {
+        window.alert(".... Must be nice to want for nothin ehh?")
     }
-}     
+    console.log(NewListItemText.textContent);
+
+
+    //Creates completion checkBox
+     
+    var checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+
+    // creates remove button
+    let removeButton = document.createElement("button");
+    removeButton.innerHTML = "x"
+
+    //gets users selected selection for list i.e kill, slap or shopping
+    if (operatorSelection == null) return;  
+    let oper = operatorSelection.value
+    
+
+    /* Once NewListItem is defined, you do not keep using (= to something), you can simply add or manipulate the element with.
+       NewListItem.innerHTML = appendChild(document.createTextNode("Hello world")) |this doesn't work|
+       NewListItem.appendChild(NewListItemText); |this does work|
+    */
+
+    //the first append child adds text, the second adds a checkbox, the third adds a remove button to  NewListItem
+    NewListItem.appendChild(NewListItemText);
+    NewListItem.appendChild(checkBox);
+    NewListItem.appendChild(removeButton);
+    console.log(oper);
+    //and the fourth assigns NewListItem to the correct parent div.
+    if (oper == "shoppingList") {
+        if (elements1 == null) return;
+        elements1.appendChild(NewListItem);
+    }
+    if (oper == "killList") {
+        if (elements2 == null) return;
+        elements2.appendChild(NewListItem);
+    }
+    if (oper == "slapList") {
+        if (elements3 == null) return;
+        elements3.appendChild(NewListItem);
+    }
+    
+
+    //Adding to the array
+    NewListItemArray.push(NewListItem);
+    console.log(NewListItemArray);
+
+    checkBox.onclick = function () {
+        if (NewListItem.style.backgroundColor == "red") {
+            window.alert(`Good to see you didn't give up on ${NewListItemText.textContent}`)
+        }
+            if (checkBox.checked == true) {
+                if ( checkBox.parentElement == null) return;
+                checkBox.parentElement.style.textDecoration = "line-through";
+                checkBox.parentElement.style.backgroundColor = "green"
+            }  else{
+                NewListItem.style.textDecoration = "none"
+            }     
+         
+    }
+
+    removeButton.onclick = function () {
+        if (NewListItem.style.backgroundColor == "red") {
+
+            //Remove element from correct list
+            if (oper == "shoppingList") {
+                if (elements1 == null) return;
+                elements1.removeChild(NewListItem);
+            }
+            if (oper == "killList") {
+                if (elements2 == null) return;
+                elements2.removeChild(NewListItem);
+            }
+            if (oper == "slapList") {
+                if (elements3 == null) return;
+                elements3.removeChild(NewListItem);
+            }
+
+            for (let i = 0; i < NewListItemArray.length; i++) {
+                    /* An array using .indexof(NewListItem) gives the value of the specific element. 
+                    It lets you isolate and manipulate that element */
+                if (i == NewListItemArray.indexOf(NewListItem)) {
+                    //Removing from the array
+                    NewListItemArray.splice(i, 1);
+                    console.log(NewListItemArray); 
+                    //NewListItemArray.indexOf(NewListItem) gives the index value of the specific element so if this element is
+                    //the third element you created, then .indexOf(NewListItem) = 3 and when i = 3 the if(true) so it will delete the 3rd element)
+                    //as splice (i, 1) =  splice (3, 1)  the the 1 represents how many element to cut. splice (3, 2) would delete element 3 AND 4.
+                    //Yay for making a functioning array monitor
+                    
+                }
+            }
+        }  
+        if (NewListItem.style.backgroundColor == "green") {
+            window.alert(`Woah, wait a minute, you want to set it to red?!? Oh,you just want to delete ${NewListItemText.textContent}? Oh... ok...`)
+            if ( checkBox.parentElement == null) return;
+            checkBox.parentElement.style.textDecoration = "underline";
+        }
+            NewListItem.style.backgroundColor = "red";
+    }
+}
+
+//removes created elements along with empting the created array for good measure.
+clearButton.onclick = function() {
+    NewListItemArray.forEach(function(element) {
+        if (elements1 == null || elements2 == null || elements3 == null) return;
+        elements1.innerHTML = "Shopping List";
+        elements2.innerHTML = "Kill Queue";
+        elements3.innerHTML = "Slap Queue";
+
+        NewListItemArray.splice(element, NewListItemArray.length);
+        console.log(NewListItemArray);
+    } )
+}
+
+//appendChild adds something to the element such as a h3 element
+//removeChild does the opposite
